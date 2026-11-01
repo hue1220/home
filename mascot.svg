@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <!-- 오리지널 캐릭터: 새싹 머리의 동글이 '뚝딱이' -->
+  <ellipse cx="120" cy="214" rx="62" ry="9" fill="#e6f4f1"/>
+  <!-- 새싹 -->
+  <path d="M120 58 C120 44 121 36 124 28" stroke="#3fb68b" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M123 34 C132 20 150 18 156 24 C150 36 134 40 123 34 Z" fill="#5fd3a8"/>
+  <path d="M121 40 C110 28 94 28 90 34 C97 45 112 46 121 40 Z" fill="#7fe0bb"/>
+  <!-- 몸 -->
+  <rect x="48" y="56" width="144" height="150" rx="70" fill="#7ed9c9"/>
+  <rect x="48" y="56" width="144" height="150" rx="70" fill="url(#shine)"/>
+  <defs>
+    <radialGradient id="shine" cx="0.35" cy="0.25" r="0.8">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- 배 -->
+  <ellipse cx="120" cy="160" rx="44" ry="34" fill="#ffffff" opacity="0.85"/>
+  <!-- 눈 -->
+  <ellipse cx="96" cy="112" rx="11" ry="13" fill="#2b3a42"/>
+  <ellipse cx="144" cy="112" rx="11" ry="13" fill="#2b3a42"/>
+  <circle cx="100" cy="107" r="4" fill="#fff"/>
+  <circle cx="148" cy="107" r="4" fill="#fff"/>
+  <!-- 볼 -->
+  <ellipse cx="78" cy="132" rx="10" ry="6" fill="#ffb3b3" opacity="0.8"/>
+  <ellipse cx="162" cy="132" rx="10" ry="6" fill="#ffb3b3" opacity="0.8"/>
+  <!-- 입 -->
+  <path d="M110 130 Q120 140 130 130" stroke="#2b3a42" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- 왼팔 + 책 -->
+  <path d="M52 140 Q34 150 40 168" stroke="#6bcab9" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <g transform="rotate(-12 48 176)">
+    <rect x="24" y="160" width="50" height="34" rx="4" fill="#ffd166"/>
+    <rect x="47" y="160" width="4" height="34" fill="#f0b43c"/>
+    <text x="35" y="182" font-family="Arial" font-weight="700" font-size="11" fill="#7a5a10">A</text>
+    <text x="56" y="182" font-family="Arial" font-weight="700" font-size="11" fill="#7a5a10">B</text>
+  </g>
+  <!-- 오른팔 + 연필 -->
+  <path d="M188 138 Q206 124 204 104" stroke="#6bcab9" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <g transform="rotate(28 206 92)">
+    <rect x="200" y="62" width="12" height="44" rx="2" fill="#ff8fa3"/>
+    <rect x="200" y="62" width="12" height="8" rx="2" fill="#f4f4f4"/>
+    <path d="M200 106 L206 120 L212 106 Z" fill="#f6d7a7"/>
+    <path d="M204 115 L206 120 L208 115 Z" fill="#2b3a42"/>
+  </g>
+  <!-- 반짝이 -->
+  <path d="M206 40 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 z" fill="#ffd166"/>
+  <path d="M34 82 l2.5 6 l6 2.5 l-6 2.5 l-2.5 6 l-2.5 -6 l-6 -2.5 l6 -2.5 z" fill="#a7c7ff"/>
+</svg>

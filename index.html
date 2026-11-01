@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master Hue의 작업실</title>
+<meta name="description" content="영어 수업자료, 방과후영어, 가족 게임, 뚝딱 AI 공방 유튜브를 한곳에서">
+<!-- 홈 화면 아이콘 -->
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2bb3a0">
+<meta name="apple-mobile-web-app-title" content="Hue 작업실">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="./"><img src="mascot.svg" alt=""> Hue's Lab</a>
+  <button class="qr-btn" id="qrBtn" aria-label="QR코드 보기">QR</button>
+</header>
+
+<main>
+  <section class="hero">
+    <img class="mascot" src="mascot.svg" alt="새싹 머리 캐릭터 뚝딱이">
+    <h1>Master Hue의 작업실</h1>
+    <p>영어 · AI · 즐거운 만들기</p>
+  </section>
+
+  <section class="cards">
+    <a class="card" href="materials.html">
+      <span class="ico mint">📚</span>
+      <h2>수업자료실</h2>
+      <p>학습지·자료를 내려받아요</p>
+    </a>
+
+    <a class="card" href="https://hue1220.github.io/">
+      <span class="ico blue">🗣️</span>
+      <h2>방과후영어</h2>
+      <p>방과후 수업 화면으로 가요</p>
+    </a>
+
+    <div class="card">
+      <span class="ico yellow">🎮</span>
+      <h2>가족 게임</h2>
+      <p>함께 하는 실시간 게임</p>
+      <div class="chips">
+        <a href="https://hue1220.github.io/mole-game/">뿅뿅 두더지</a>
+        <a href="https://hue1220.github.io/mole-game/tower/">뚝딱 단어탑</a>
+      </div>
+    </div>
+
+    <a class="card" href="https://www.youtube.com/@easyaiworkshop" target="_blank" rel="noopener">
+      <span class="ico pink">▶️</span>
+      <h2>뚝딱 AI 공방</h2>
+      <p>AI로 뚝딱 만드는 유튜브</p>
+    </a>
+  </section>
+
+  <section class="news">
+    <h3>📌 새 소식</h3>
+    <ul>
+      <li><b>11.01</b> 홈페이지를 새로 열었어요!</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <a href="https://www.instagram.com/hueshin1220/" target="_blank" rel="noopener">Instagram</a>
+  <span>·</span>
+  <span>© 2026 Master Hue</span>
+</footer>
+
+<!-- QR 창 -->
+<div class="modal" id="qrModal" hidden>
+  <div class="modal-box">
+    <h3>휴대폰으로 스캔하세요</h3>
+    <div id="qr"></div>
+    <p class="url" id="qrUrl"></p>
+    <button id="qrClose">닫기</button>
+  </div>
+</div>
+
+<script src="qr.js"></script>
+<script>
+  const modal = document.getElementById('qrModal');
+  const url = location.href.split('#')[0].split('?')[0].replace(/index\.html$/, '');
+  let made = false;
+  document.getElementById('qrBtn').onclick = () => {
+    if (!made && window.qrcode) {
+      const q = qrcode(0, 'M'); q.addData(url); q.make();
+      document.getElementById('qr').innerHTML = q.createSvgTag({ cellSize: 6, margin: 2 });
+      made = true;
+    }
+    document.getElementById('qrUrl').textContent = url;
+    modal.hidden = false;
+  };
+  document.getElementById('qrClose').onclick = () => modal.hidden = true;
+  modal.onclick = e => { if (e.target === modal) modal.hidden = true; };
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --point: #2bb3a0;
+  --point: #2EC4B6;
   --text: #24323a;
   --sub: #6b7a83;
   --line: #e9eef0;
@@ -29,7 +29,7 @@ main { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 
 /* 메인 소개 */
 .hero { text-align: center; padding: 28px 0 36px; }
-.mascot { width: 180px; height: 180px; animation: bob 3s ease-in-out infinite; }
+.mascot { width: 150px; height: 150px; animation: bob 3s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(-8px); } }
 .hero h1 { font-size: clamp(26px, 5vw, 38px); font-weight: 800; margin-top: 12px; letter-spacing: -0.5px; }
 .hero p { color: var(--sub); margin-top: 6px; font-size: 16px; }
@@ -46,13 +46,13 @@ main { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 }
 a.card:hover, .card:hover {
   transform: translateY(-3px); border-color: var(--point);
-  box-shadow: 0 8px 22px rgba(43, 179, 160, .12);
+  box-shadow: 0 8px 22px rgba(46, 196, 182, .14);
 }
 .ico {
   display: inline-flex; width: 48px; height: 48px; border-radius: 14px;
   align-items: center; justify-content: center; font-size: 24px;
 }
-.mint { background: #e3f7f3; } .blue { background: #e6efff; }
+.mint { background: #e2f7f5; } .blue { background: #e6efff; }
 .yellow { background: #fff5d9; } .pink { background: #ffe9ee; }
 .card h2 { font-size: 19px; font-weight: 700; margin-top: 14px; }
 .card p { color: var(--sub); font-size: 14px; margin-top: 4px; }
@@ -64,7 +64,7 @@ a.card:hover, .card:hover {
 .chips a:hover { background: #ffe9a8; }
 
 /* 새 소식 */
-.news { margin: 32px 0 8px; padding: 20px; background: #f6fbfa; border-radius: 18px; }
+.news { margin: 32px 0 8px; padding: 20px; background: #f3fbfa; border-radius: 18px; }
 .news h3 { font-size: 16px; margin-bottom: 8px; }
 .news li { list-style: none; font-size: 15px; padding: 4px 0; }
 .news b { color: var(--point); margin-right: 8px; }
@@ -110,7 +110,7 @@ footer a:hover { color: var(--point); }
 .file:hover { border-color: var(--point); }
 .file .type {
   flex: none; width: 46px; height: 46px; border-radius: 12px; font-size: 12px; font-weight: 800;
-  display: flex; align-items: center; justify-content: center; background: #e3f7f3; color: var(--point);
+  display: flex; align-items: center; justify-content: center; background: #e2f7f5; color: var(--point);
 }
 .file .info { flex: 1; min-width: 0; }
 .file .name { font-weight: 700; }
